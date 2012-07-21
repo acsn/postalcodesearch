@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Demo - ZIP code search</title> 
+
+	<link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+
+  	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/postalcodesearch.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.1.0_edited.js"></script>
+	
+</head> 
+
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Demo - postal code search using jquery mobile</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+
+		<h1>DEMO - postal code search using jquery mobile</h1>
+
+		<p>This is a demo to show how to make a postal code search from the French postal codes using the listview component of JqueryMobile.</p>
+		<p>This code can be adapted to make a serach inside US ZIP codes.</p>
+		<p>A small modification of jquery mobile 1.1.0 needs to be done to perform a this demo. The file that contains this modification is jquery.mobile-1.1.0_edited.js </p>
+        <p>By default the list is empty because it's content generated only.
+		A callback function needs to be implemented to dynamicaly generate/append then content items.
+		This callback is binded on <code>listview.options.onkeyupcallback</code>
+		Javascript code must be written to handle this. (see postalcodesearch.js)
+		</p>
+		<p>When you click on a item the result is printed on the output console of your browser (so open the console to see the result).
+		Please note that there is still a small bug: you need to click twice on an item to choose it.
+		</p>
+    
+		<!-- dynamic-listview-demo -->
+		<div id="search_commune">
+			<ul data-searchtype="commune" data-role="listview" data-filter="true" data-filter-placeholder="(french) Recherher une ville, un code postal, une commune..." data-inset="true">
+			</ul>
+		</div>
+		
+		<div id="search_dep">
+			<ul data-searchtype="departement" data-role="listview" data-filter="true" data-filter-placeholder="(french) Recherher un d&eacute;partement" data-inset="true">
+			</ul>
+		</div>
+		
+		<div id="search_region">
+			<ul data-searchtype="region" data-role="listview" data-filter="true" data-filter-placeholder="(french) Recherher une r&eacute;gion" data-inset="true">
+			</ul>
+		</div>
+		
+		<!--div id="search_ZIP">
+			<ul data-searchtype="region" data-role="listview" data-filter="true" data-filter-placeholder="Search a city, a ZIP, a postal code... (not implemented)" data-inset="true">
+			</ul>
+		</div-->
+	
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>by A.C.S.N / Nicolas Bigot</h4>
+	</div><!-- /footer -->
+	
+</div><!-- /page -->
+
+</body>
+</html>
