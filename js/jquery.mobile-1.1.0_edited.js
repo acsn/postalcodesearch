@@ -5805,10 +5805,11 @@ $( document ).delegate( ":jqmData(role='listview')", "listviewcreate", function(
 		.jqmData( "lastval", "" )
 		.bind( "keyup change", function() {
 		
-			/*nb*/
+			/* begin modification */
 			if ( typeof(listview.options.onKeyUpCallback) !== "undefined" ) {
 				listview.options.onKeyUpCallback( $(this), list );
 			}
+			/* end modification */
 			
 			var $this = $(this),
 				val = this.value.toLowerCase(),
